@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table border">
+                <tr>
+                    <th>id</th>
+                    <th>Student name</th>
+                    <th>age</th>
+                    <th>mobile no</th>
+                </tr>
+                {%for std in student%}
+                <tr>
+                    <td>{{std.id}}</td>
+                    <td>{{std.student_name}}</td>
+                    <td>{{std.age}}</td>
+                    <td>{{std.mobile}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+{%endblock%}
