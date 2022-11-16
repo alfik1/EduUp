@@ -15,6 +15,8 @@ class IndexView(CreateView):
     success_url=reverse_lazy("index")
     def form_valid(self, form):
         form.instance.user=self.request.user
+        print(form.instance)
+
         return super().form_valid(form)
 
 #for login purposes only
